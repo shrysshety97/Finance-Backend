@@ -12,10 +12,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Authentication endpoints â€” publicly accessible (no JWT required).
+ * Authentication endpoints  publicly accessible (no JWT required).
  *
- * POST /api/auth/register  â€” Create a new user account and receive a JWT.
- * POST /api/auth/login     â€” Authenticate and receive a JWT.
+ * POST /api/auth/register  Create a new user account and receive a JWT.
+ * POST /api/auth/login      Authenticate and receive a JWT.
  */
 @RestController
 @RequestMapping("/api/auth")

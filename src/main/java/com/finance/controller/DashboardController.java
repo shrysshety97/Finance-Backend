@@ -12,15 +12,6 @@ import java.util.List;
 /**
  * Dashboard analytics endpoints.
  *
- * â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
- * â”‚ Endpoint                                     â”‚ Allowed Roles                â”‚
- * â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
- * â”‚ GET /api/dashboard/summary                   â”‚ ADMIN, ANALYST, VIEWER       â”‚
- * â”‚ GET /api/dashboard/category-totals           â”‚ ADMIN, ANALYST, VIEWER       â”‚
- * â”‚ GET /api/dashboard/monthly-trends            â”‚ ADMIN, ANALYST               â”‚
- * â”‚ GET /api/dashboard/recent-activity           â”‚ ADMIN, ANALYST               â”‚
- * â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
- *
  * VIEWER role can access summary and category totals (read-only aggregated data).
  * Detailed trend/activity data is restricted to ANALYST and ADMIN.
  */
@@ -31,10 +22,6 @@ public class DashboardController {
 
     private final DashboardService dashboardService;
 
-    /**
-     * Overall financial summary: total income, expenses, net balance, record count.
-     * Accessible to all authenticated roles.
-     */
     @GetMapping("/summary")
     @PreAuthorize("hasAnyRole('ADMIN', 'ANALYST', 'VIEWER')")
     public ResponseEntity<ApiResponse<DashboardSummaryResponse>> getSummary() {

@@ -25,14 +25,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  * Spring Security configuration.
  *
  * Security design:
- * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
- *  â€¢ Stateless sessions (JWT-only, no HttpSession).
- *  â€¢ CSRF disabled (appropriate for REST APIs with JWT).
- *  â€¢ Public endpoints: /api/auth/** only.
- *  â€¢ Role-level enforcement is delegated to @PreAuthorize on service/controller
+ *
+ *  Stateless sessions (JWT-only, no HttpSession).
+ *  CSRF disabled (appropriate for REST APIs with JWT).
+ *  Public endpoints: /api/auth/** only.
+ *  Role-level enforcement is delegated to @PreAuthorize on service/controller
  *    methods (enabled via @EnableMethodSecurity).
- *  â€¢ Custom 401 entry point returns a JSON error instead of an HTML redirect.
- * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+ *   Custom 401 entry point returns a JSON error instead of an HTML redirect.
+ *
  */
 @Configuration
 @EnableWebSecurity

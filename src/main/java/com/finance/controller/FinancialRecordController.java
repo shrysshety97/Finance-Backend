@@ -16,21 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
-/**
- * Financial record CRUD endpoints with role-based access control.
- *
- * â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
- * â”‚ Endpoint                               â”‚ Allowed Roles                          â”‚
- * â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
- * â”‚ GET    /api/records                    â”‚ ADMIN, ANALYST                         â”‚
- * â”‚ GET    /api/records/{id}               â”‚ ADMIN, ANALYST                         â”‚
- * â”‚ POST   /api/records                    â”‚ ADMIN only                             â”‚
- * â”‚ PUT    /api/records/{id}               â”‚ ADMIN only                             â”‚
- * â”‚ DELETE /api/records/{id}               â”‚ ADMIN only  (soft delete)              â”‚
- * â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
- *
- * VIEWER role can access dashboard summaries but not individual record details.
- */
+
 @RestController
 @RequestMapping("/api/records")
 @RequiredArgsConstructor
@@ -38,7 +24,6 @@ public class FinancialRecordController {
 
     private final FinancialRecordService recordService;
 
-    // â”€â”€â”€ Search â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
     /**
      * Full-text keyword search across category and notes fields.

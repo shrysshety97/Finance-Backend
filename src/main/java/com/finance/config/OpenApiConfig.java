@@ -17,8 +17,8 @@ import org.springframework.context.annotation.Configuration;
  * Raw OpenAPI JSON spec:       http://localhost:8080/v3/api-docs
  *
  * To authenticate in Swagger UI:
- *   1. POST /api/auth/login  â†’ copy the accessToken from the response
- *   2. Click "Authorize" â†’ paste:  Bearer <your_token>
+ *   1. POST /api/auth/login  copy the accessToken from the response
+ *   2. Click "Authorize"  paste:  Bearer <your_token>
  */
 @Configuration
 public class OpenApiConfig {
