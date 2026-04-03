@@ -1,6 +1,4 @@
-/target/
 *.log
 .idea/
 .vscode/
 *.iml
-*.class
