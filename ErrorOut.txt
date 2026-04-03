@@ -1,0 +1,44 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.finance:finance-backend >---------------------
+[INFO] Building finance-backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ finance-backend ---
+[INFO] Deleting C:\Users\shrey\Downloads\finance-backend-final\finance-backend\target
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ finance-backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ finance-backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 43 source files to C:\Users\shrey\Downloads\finance-backend-final\finance-backend\target\classes
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ finance-backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ finance-backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to C:\Users\shrey\Downloads\finance-backend-final\finance-backend\target\test-classes
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ finance-backend ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ finance-backend ---
+[INFO] Building jar: C:\Users\shrey\Downloads\finance-backend-final\finance-backend\target\finance-backend-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:2.7.18:repackage (repackage) @ finance-backend ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.242 s
+[INFO] Finished at: 2026-04-03T17:21:03+05:30
+[INFO] ------------------------------------------------------------------------
