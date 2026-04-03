@@ -1,6 +1,6 @@
 # Finance Data Processing & Access Control Backend
 
-A production-quality RESTful backend for a Finance Dashboard system — built with **Java 17**, **Spring Boot 3.2**, **Spring Security + JWT**, **MySQL**, and **Hibernate/JPA**.
+A production-quality RESTful backend for a Finance Dashboard system — built with **Java 8**, **Spring Boot 2.7.18**, **Spring Security + JWT**, **MySQL**, and **Hibernate/JPA**.
 
 ---
 
@@ -23,13 +23,13 @@ A production-quality RESTful backend for a Finance Dashboard system — built wi
 
 | Layer            | Technology                              |
 |------------------|-----------------------------------------|
-| Language         | Java 17                                 |
-| Framework        | Spring Boot 3.2                         |
+| Language         | Java 8                                  |
+| Framework        | Spring Boot 2.7.18                      |
 | Web              | Spring MVC (REST)                       |
 | Security         | Spring Security + JWT (JJWT 0.12)       |
 | Persistence      | Spring Data JPA + Hibernate             |
 | Database         | MySQL 8 (H2 for tests)                  |
-| Validation       | Jakarta Bean Validation                 |
+| Validation       | Java Bean Validation                    |
 | Build            | Maven                                   |
 | Boilerplate      | Lombok                                  |
 | Testing          | JUnit 5, Mockito, MockMvc               |
@@ -393,7 +393,7 @@ Returns the 5 most recently created records (max 50).
 
 ### Prerequisites
 
-- Java 17+
+- Java 8+
 - Maven 3.8+
 - MySQL 8.0+
 
@@ -436,6 +436,14 @@ mvn spring-boot:run
 ```
 
 The server starts on **http://localhost:8080**
+
+### Swagger UI API Documentation
+
+Once the server is running, the interactive Swagger UI API documentation is available at:
+**http://localhost:8080/swagger-ui/index.html**
+
+OpenAPI v3 JSON specification is available at:
+**http://localhost:8080/v3/api-docs**
 
 ### Default seeded users (created automatically on first run)
 
