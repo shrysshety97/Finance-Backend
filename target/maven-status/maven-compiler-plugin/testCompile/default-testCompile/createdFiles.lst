@@ -1,6 +1,0 @@
-com\finance\service\FinancialRecordServiceTest.class
-com\finance\security\JwtTokenProviderTest.class
-com\finance\service\AuthServiceTest.class
-com\finance\controller\AuthControllerIntegrationTest.class
-com\finance\controller\FinancialRecordControllerIntegrationTest.class
-com\finance\service\DashboardServiceTest.class
